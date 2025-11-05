@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comfort Bites</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <a class="skip-to-main" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="wrapper" data-width="wide">
+            <div class="site-header__inner">
+                <h1>Comfort Bites</h1> 
+                <button aria-controls="primary-nav" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <img src="assets/hamburger.svg" alt=""/>
+                </button>
+                <nav id="primary-nav" class="primary-navigation">
+                    <ul>
+                        <li><a href="/">About</a></li>
+                        <li><a href="allrecipe.html">All Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main id="main inside">
+        <section class="section">
+            <div class="wrapper flow">
+                <h2 class="section-title">Chicken & Grain Bowl</h2>
+                <p>Blistered blueberries amplify the deliciousness in this beautiful warm chicken salad. Packed with manganese for cell protection and bone health, and a good source of fibre and anthocyanins, blueberries are a delicious way to support your heart, brain, and overall well-being.</p>
+            
+                <!-- three coloumns-->
+                <div class="equal-columns">
+                    <div class="card">
+                        <img src="assets/FP-1.webp" alt="explore" />
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">Ingredients</h3>
+                        <ul class="inner-list">
+                            <li>2 x 150g skinless free-range chicken breasts</li>
+                            <li>1 teaspoon ras el hanout, plus extra to serve</li>
+                            <li>olive oil</li>
+                            <li>2 cloves of garlic</li>
+                            <li>1 lemon</li>
+                            <li>160g blueberries</li>
+                            <li>1 x 250g packet of cooked mixed grains</li>
+                            <li>1 x 400g tin of lentils</li>
+                            <li>160g frozen peas</li>
+                            <li>½ a bunch of mint (15g)</li>
+                            <li>30g feta cheese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="background-light section">
+            <!-- two-columns -->
+             <div class="wrapper" data-width="wide">
+                <div class="equal-columns" data-gap="large" data-alignment="centered">
+                    <h2 class="section-title">Methods</h2>
+                    <div class="flow font-size-lg">
+                        <p>1. Lightly score the thickest part of the chicken and season with sea salt, black pepper and the ras el hanout. Place in a large non-stick frying pan on a medium-high heat with 1 tablespoon of olive oil and cook for 5 minutes, or until golden, turning halfway.</p>
+
+                        <p>2. Peel and finely slice the garlic, use a speed-peeler to strip the lemon peel into small pieces and add both to the pan. Cook for 2 minutes, or until the garlic is golden, then move the garlic on top of the chicken and add the blueberries. Once they start to pop and the chicken is cooked through, remove it all to a board, leaving the pan on the heat.</p>
+
+                        <p>3. Tip in the grains with the lentils, juice and all. Reduce for 2 minutes, then add the peas and cook until hot through. Squeeze in half the lemon juice, season to perfection and divide between serving bowls with the blueberries.</p>
+
+                        <p>4. Slice and add the chicken, plus any resting juices. Pick over the mint and crumble over the feta. Serve with lemon wedges and extra ras el hanout.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="background-dark section">
+            <div class="wrapper" data-width="wide">
+                <div class="equal-columns" data-gap="large" data-alignment="centered">
+                <div class="flow font-size-lg">
+                    <h2 class="section-title">Quick and Easy Recipes</h2>
+                    <p>These quick, easy recipes will make you feel like a pro, even when you're short on time.</p>
+                    <a class="button" href="#">Get the Recipes <span class="visually-hidden">about quick and easy recipes</span></a>
+                </div>
+                    <div>
+                        <img src="assets/quick-easy.webp" alt="food" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer home">
+        <p class="site-footer__title">Happy Cooking!</p>
+    <a href="mailto:comfortbites@email.com">&copy;Comfort Bites</a>
+    </footer>
+</body>
+
+</html>

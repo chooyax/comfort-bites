@@ -2,49 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comfort Bites</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <h1 class="title">Comfort Bites</h1>
-        <ul class="menu">
-            <li>Home</li>
-            <li>About</li>
-            <li>Recipes</li>
-        </ul>
+    <a class="skip-to-main" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="wrapper" data-width="wide">
+            <div class="site-header__inner">
+                <h1>Comfort Bites</h1> 
+                <button aria-controls="primary-nav" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <img src="assets/hamburger.svg" alt=""/>
+                </button>
+                <nav id="primary-nav" class="primary-navigation">
+                    <ul>
+                        <li><a href="/">About</a></li>
+                        <li><a href="allrecipe.html">All Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="hamburger-menu" id="menu-trigger">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg" alt="Hamburger icon">
-      </div>
+
     </header>
-    <main>
-        <div class="banner">Banner goes here...</div>
-        <section class="featured-post">
-            <div class="post-item">
-                <img src="#">
-                <p class="item-title"></p>
+    <main id="main">
+        <!-- <section class="hero flow section" data-padding="compact"> -->
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/banner-1.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/banner-1.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/banner-1.webp" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
             </div>
-            <div class="post-item">
-                <img src="#">
-                <p class="item-title"></p>
-            </div>
-            <div class="post-item">
-                <img src="#">
-                <p class="item-title"></p>
-            </div>
-            <div class="post-item">
-                <img src="#">
-                <p class="item-title"></p>
+        
+       <!-- </section> -->
+        <section class="section">
+            <div class="wrapper flow">
+                <h2 class="section-title">Recipes of the week</h2>
+                <p>Our Recipe of the Week brings you a delicious new dish to inspire your cooking and brighten your table. Each week, we feature a fresh, flavorful recipe that’s easy to make, uses simple ingredients, and delivers big on taste. Whether you’re craving comfort food, a quick weekday meal, or something special for the weekend, our weekly recipe is designed to spark creativity in your kitchen and make every bite memorable. </p>
+            
+                <!-- three coloumns-->
+                <div class="equal-columns">
+                    <div class="card">
+                        <a href="inside.html">
+                            <img src="assets/FP-1.webp"  alt="chicken and grain bowl" />
+                        </a>
+                        <h3 class="card__title">Chicken & Grain Bowl</h3>
+                        <p>Blistered blueberries amplify the deliciousness in this beautiful warm chicken salad.</p>
+
+                        <p>Packed with manganese for cell protection and bone health, and a good source of fibre and anthocyanins, blueberries are a delicious way to support your heart, brain, and overall well-being.</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/FP-2.webp" alt="expertise" />
+                        <h3 class="card__title">Beef Rendang</h3>
+                        <p>Rendang is a wonderfully perfumed, thick, spiced stew from Indonesia and is often touted as one of the tastiest foods in the world. It normally takes hours of stirring and vigilant care, but of course using leftover brisket means it can be made in a reasonably short time, with equally tender, beautiful results.</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/FP-3.webp" alt="culinary" />
+                        <h3 class="card__title">Chicken burgers</h3>
+                        <p>Who doesn’t love a good chicken burger? These are perfect for summer eating, whether you’re firing up the barbecue or cooking indoors. Juicy, marinated chicken is piled into a bun with spiced yoghurt, chargrilled peppers and crisp lettuce, then served with grilled corn on the cob for an extra hit of seasonal veg. Get stuck in!</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section>
-            <div class="article"></div>
+
+        <section class="background-accent text-center section" data-padding="compact">
+            <div class="wrapper" data-width="narrow">
+                <div class="flow font-size-lg text-high-contrast">
+                    <h2 class="section-title">Start your <span class="text-brand">Foraging Adventure!</span></h2>
+                    <p>Whether you're seeking a deeper connection with nature, a new outdoor hobby, or simply love the idea of finding your own food, mushroom foraging offers a uniquely rewarding experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="background-light section">
+            <!-- two-columns -->
+             <div class="wrapper" data-width="wide">
+                <div class="equal-columns" data-gap="large" data-alignment="centered">
+                    <div>
+                        <img src="assets/mypickrecipe.webp" alt="expert" />
+                    </div>
+                    <div class="flow font-size-lg">
+                        <h2 class="section-title">My Pick of the Day</h2>
+                        <p>"Halloween is the best excuse to get creative with food! This grazing board is loaded with spooky snacks that hit all the marks: amazing to look at, icredible to eat. Get stuck in!"</p>
+                        <a class="button" href="#"><span class="visually-hidden">My Pick of the day</span>Get the Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="background-dark section">
+            <div class="wrapper" data-width="wide">
+                <div class="equal-columns" data-gap="large" data-alignment="centered">
+                <div class="flow font-size-lg">
+                    <h2 class="section-title">Quick and Easy Recipes</h2>
+                    <p>These quick, easy recipes will make you feel like a pro, even when you're short on time.</p>
+                    <a class="button" href="#">Get the Recipes <span class="visually-hidden">about quick and easy recipes</span></a>
+                </div>
+                    <div>
+                        <img src="assets/quick-easy.webp" alt="food" />
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer home">
+        <p class="site-footer__title">Happy Cooking!</p>
+    <a href="mailto:comfortbites@email.com">&copy;Comfort Bites</a>
+    </footer>
 </body>
+
 </html>
