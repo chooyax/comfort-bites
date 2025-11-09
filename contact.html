@@ -28,9 +28,9 @@
                 </button>
                 <nav id="primary-nav" class="primary-navigation">
                     <ul>
-                        <li><a href="/">About</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="allrecipe.html">All Recipes</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,23 +41,29 @@
         <section class="section">
             <div class="wrapper flow">
                 <div class="container">
-                    <form action="action_page.php">
+                    <form id="application-form">
 
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <input type="text" id="first-name" name="firstname" placeholder="Your name..">
 
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <input type="text" id="last-name" name="lastname" placeholder="Your last name..">
 
                         <label for="country">Country</label>
                         <select id="country" name="country">
+                        <option>Select One</option>
                         <option value="australia">Australia</option>
                         <option value="canada">Canada</option>
                         <option value="usa">USA</option>
+                        <option value="usa">Singapore</option>
                         </select>
 
                         <label for="subject">Subject</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <ul id="errors">
+
+                        </ul>
 
                         <input type="submit" value="Submit">
                     </form>

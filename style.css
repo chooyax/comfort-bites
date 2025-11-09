@@ -639,8 +639,8 @@
 
   .carousel-fade .carousel-item {
     opacity:0;
-    transition-property: opacity;ß
-    transform: none;
+    transition-property: opacity;
+    text-transform: none;
   }
   
   .carousel-fade .carousel-item-next.carousel-item-start,
