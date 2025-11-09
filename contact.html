@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comfort Bites</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <a class="skip-to-main" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="wrapper" data-width="wide">
+            <div class="site-header__inner">
+                <h1><a href="index.html">Comfort Bites</a></h1> 
+                <button aria-controls="primary-nav" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <img src="assets/hamburger.svg" alt=""/>
+                </button>
+                <nav id="primary-nav" class="primary-navigation">
+                    <ul>
+                        <li><a href="/">About</a></li>
+                        <li><a href="allrecipe.html">All Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main id="main inside">
+        <section class="section">
+            <div class="wrapper flow">
+                <div class="container">
+                    <form action="action_page.php">
+
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer home">
+        <p class="site-footer__title">Happy Cooking!</p>
+    <a href="mailto:comfortbites@email.com">&copy;Comfort Bites</a>
+    </footer>
+</body>
+</html>
