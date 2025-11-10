@@ -81,23 +81,23 @@ const validation = (e) => {
     error = false;
 }
 
-appForm.addEventListener('submit', validation)
+//appForm.addEventListener('submit', validation)
 
 
 
 const subsForm = document.querySelector('#subscribe')
 const inputName = document.querySelector('#name')
 const inputEmail = document.querySelector('#email')
+const successfulSubcriptionMessage = document.querySelector('#success-subscription')
+let inputRefresh = false;
 
 const subscription = (e) => {
-   e.preventDefault()
-   errorList.innerHTML = null
-   if (inputName.value.length < 2) {
-        const err = document.createElement('li')
-        err.textContent = "Name must be at least 2 characters"
-        errorList.appendChild(err)
-    }
-
+    e.preventDefault()
+    if (inputRefresh === false) {
+        inputName.value = "";
+        inputEmail.value = "";
+        successfulSubcriptionMessage.textContent = "Thank you for subscribing"
+    } 
 }
 
 subsForm.addEventListener('submit', subscription)
