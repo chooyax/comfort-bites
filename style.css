@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-@layer reset {
   *,
   *::before,
   *::after {
@@ -73,84 +72,10 @@
     font: inherit;
   }
 
-}
-
 @layer base {
-  :root {
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-gray-100: hsl(0, 2%, 79%);
-    --clr-brand-400: hsl(25, 88%, 75%);
-    --clr-brand-500: hsl(25, 88%, 66%);
-    --clr-green-400: hsl(143, 19%, 49%);
-    --clr-green-500: hsl(143, 38%, 37%);
-    --clr-green-600: hwb(145 13% 75%);
-    --clr-brown-500: hsl(10, 5%, 25%);
-    --clr-brown-600: hsl(9, 7%, 21%);
-    --clr-brown-700: hsl(9, 8%, 16%);
-    --clr-brown-800: hsl(0, 6%, 15%);
-    --clr-brown-900: hsl(0, 6%, 13%);
-  
-    --clr-orange-500: hsl(28, 43%, 28%);
-    --clr-red-500: hsl(359, 34%, 24%);
-    --clr-teal-500: hsl(186, 42%, 25%);
-
-    --ff-heading: "Outfit", sans-serif;
-    --ff-body: "Fira Sans", sans-serif;
-
-    --fs-300: 0.875rem;
-    --fs-400: 1rem;
-    --fs-500: 1.125rem;
-    --fs-600: 1.25rem;
-    --fs-700: 1.5rem;
-    --fs-800: 2rem;
-    --fs-900: 3.75rem;
-    --fs-1000: 3.75rem;
-
-    @media (width > 760px) {
-      --fs-300: 0.875rem;
-      --fs-400: 1rem;
-      --fs-500: 1.25rem;
-      --fs-600: 1.5rem;
-      --fs-700: 2rem;
-      --fs-800: 3rem;
-      --fs-900: 5rem;
-      --fs-1000: 7.5rem;
-    }
-    
-  }
-  :root {
-    /* primitives here */
-    --text-main: var(--clr-gray-100);
-    --text-high-contrast: var(--clr-white);
-    --text-brand: var(--clr-brand-500);
-    --text-brand-light: var(--clr-brand-400);
-  
-    --background-accent-light: var(--clr-green-400);
-    --background-accent-main: var(--clr-green-500);
-    --background-accent-dark: var(--clr-green-600);
-  
-    --background-extra-light: var(--clr-brown-500);
-    --background-light: var(--clr-brown-600);
-    --background-main: var(--clr-brown-700);
-    --background-dark: var(--clr-brown-800);
-    --background-extra-dark: var(--clr-brown-900);
-
-    --font-size-heading-sm: var(--fs-700);
-    --font-size-heading-regular: var(--fs-800);
-    --font-size-heading-lg: var(--fs-900);
-    --font-size-heading-xl: var(--fs-1000);
-  
-    --font-size-sm: var(--fs-300);
-    --font-size-regular: var(--fs-400);
-    --font-size-lg: var(--fs-600);
-
-    --border-radius-1: 0.25rem;
-    --border-radius-2: 0.5rem;
-    --border-radius-3: 0.75rem;
-  }
 
   html {
-    font-family: var(--ff-body);
+    font-family: "Fira Sans", sans-serif;
     line-height: 1.6;
   }
   body {
@@ -166,8 +91,8 @@
   h2 
   h3, 
   h4 {
-    font-family: var(--ff-heading);
-    color: var(--text-high-contrast);
+    font-family: "Outfit", sans-serif;
+    color: hsl(0, 0%, 100%);
   }
   h1 {
     font-size: 2rem;
@@ -179,18 +104,17 @@
   
   a:hover,
   a:focus-visible {
-    color: var(--text-brand-light);
+    color: hsl(25, 88%, 75%);
   }
 
   img {
-    border-radius: var(--border-radius-3);
+    border-radius: 0.75rem;
   }
   
 }
 
 @layer layout {
   .flow > * + * {
-   /* margin-block-start: var(--flow-space, 1em); */
     margin-top: var(--flow-spacer, 1em);
   }
 
@@ -260,14 +184,6 @@
     width: 1px;
   }
 
-  .skip-to-main {
-    position: absolute;
-    background: var(--background-accent-main);
-    padding: 1rem;
-    border-radius: var(--border-radius-2);
-  }
-
-
   .site-header {
     padding-block: 1rem;
   }
@@ -319,12 +235,12 @@
       z-index:10;
       top: 0;
       right: 0;
-      font-size: var(--font-size-lg);
+      font-size: 1.25rem;
       font-weight: 700;
-      font-family: var(--ff-heading);
-      background-color: var(--background-accent-main);
+      font-family: "Outfit", sans-serif;
+      background-color: hsl(143, 38%, 37%);
       padding: 2rem;
-      border-radius: 0 0 0 var(--border-radius-3);
+      border-radius: 0 0 0 0.75rem;
 
       ul {
         gap: 0;
@@ -334,7 +250,7 @@
       li + li{
         margin-block-start: 1.5rem;
         padding-block-start: 1.5rem;
-        border-top: 2px solid var(--background-accent-light);
+        border-top: 2px solid hsl(143, 19%, 49%);
       }
     }
   }
@@ -360,12 +276,12 @@
     gap: 2rem;
 
     a {
-      color: var(--text-main);
+      color: hsl(0, 2%, 79%);
     }
 
     a:hover,
     a:focus-visible {
-      color: var(--text-brand-light);
+      color: hsl(25, 88%, 75%);
     }
   }
 
@@ -374,51 +290,56 @@
   }
 
   .site-footer__title{
-  font-size: var(--font-size-lg);
-  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   color: #fff;
 }
 
-  .hero {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--text-high-contrast);
-    background-image: url(assets/hero.webp);
-    background-size:cover;
-    background-position: center;
-  }
-
-  .hero__title {
-    font-size: var(--font-size-heading-lg);
-
-    span {
-      display: block;
-      font-size: var(--font-size-heading-xl);
-      color: var(--text-brand);
-    }
-  }
 
   .card {
     display:grid;
-    gap: var(--card-gap, 1rem);
+    gap: 1rem;
     padding: 1rem;
     background-color: hwb(145 13% 75%);
-    border-radius: var(--border-radius-3);
+    border-radius: 0.75rem;
     color: #fff;
+    transition: background-color 1s ease-out, transform 1s ease-out;
 
     img {
-      border-radius: var(--border-radius-2);
+      border-radius: 0.5rem;
     }
 
 
   }
   .card__title {
-    font-size: var(--card-title-font-size, 
-    var(--font-size-heading-sm));
-    
-    color: var(--card-title-color, 
-    var(--text-brand));
+    font-size: 1.5rem;
+    color: hsl(25, 88%, 66%);
+  }
+
+  .card:hover {
+    background-color: rgb(66, 119, 66);
+    transform: scale(1.1);
+  }
+
+  .inside-card {
+    display:grid;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: hwb(145 13% 75%);
+    border-radius: 0.75rem;
+    color: #fff;
+    transition: background-color 1s ease-out, transform 1s ease-out;
+
+    img {
+      border-radius: 0.5rem;
+    }
+
+
+  }
+  .inside-card__title {
+    font-size: 1.5rem;
+    color: hsl(25, 88%, 66%);
   }
 
   .button {
@@ -428,15 +349,15 @@
     display: inline-flex;
     padding: .5rem 1rem;
     background-color: hsl(0, 6%, 15%);
-    font-family: var(--ff-heading);
+    font-family: "Outfit", sans-serif;
     font-weight: 700;
-    border-radius: var(--border-radius-2);
+    border-radius: 0.5rem;
   }
 
   .button:hover,
   .button:focus-visible {
-    color: var(--text-high-contrast);
-    background-color: var(--background-accent-light);
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(143, 19%, 49%);
   }
 }
 
@@ -491,27 +412,27 @@
     color: var(--text-brand);
   }
   .text-high-contrast {
-    color: var(--text-high-contrast);
+    color: hsl(0, 0%, 100%);
   }
 
   .section-title {
-    font-size: var(--font-size-heading-regular);
+    font-size: 2rem;
+
+    @media (width > 760px) {
+        font-size: 3rem;
+    }
   }
 
-  .background-base {
-    background-color: var(--background-base);
-  }
-
-  .background-extra-light {
-    background-color: var(--background-extra-light);
+  .text-brand {
+    color: hsl(25, 88%, 66%);
   }
   
   .background-light {
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
   }
 
   .background-dark {
-    background-color: #223f2e;
+    background-color: hsl(145, 29%, 19%);
   }
 
   .background-dark .section-title,
@@ -529,10 +450,10 @@
   }
 
   .font-size-sm {
-    font-size: var(--font-size-sm);
+    font-size: 0.875rem;
   }
   .font-size-regular {
-    font-size: var(--font-size-regular);
+    font-size: 1rem;
   }
   .font-size-md {
     font-size: 1.125rem;
@@ -544,13 +465,6 @@
 
   .inner-list {
   font-size: 2rem;
-  }
-
-  .recipe-facts__container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-block-start: 32px;
   }
 
   .prep-details {
