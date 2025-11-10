@@ -68,10 +68,15 @@ const validation = (e) => {
         countrySelect.selectedIndex = 0;
 
         successMessageForForm.textContent = "Thank you for your queries"
+        const successMessageClass = document.querySelector('#thank-you-message').classList.add('message-style')
 
         setTimeout(function(){
             successMessageForForm.textContent = "";
+            const removeClass = document.querySelector('#thank-you-message')
+            removeClass.classList.remove('message-style')
         }, 5000);
+
+
     }
     error = false;
 }
