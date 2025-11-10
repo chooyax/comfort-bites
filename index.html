@@ -103,17 +103,19 @@
         <section class="background-accent text-center section" data-padding="compact">
             <div class="wrapper" data-width="narrow">
                 <div class="flow font-size-lg text-high-contrast">
-                    <form>
+                    <form id="subscribe">
                         <div>
                             <h2 class="section-title">Never miss a <span class="text-brand">Recipe!</span></h2>
                             <p>Subscribe to our newsletter and receive a recipe every week!</p>
                         </div>
                         <div class="container">
-                            <input type="text" placeholder="Name" name="name" required>
-                            <input type="text" placeholder="Email address" name="mail" required>
+                            <input type="text" id="name" placeholder="Name" name="name" required>
+                            <input type="text" id="email" placeholder="Email address" name="mail" required>
                             <label>
                         </div>
+                        <ul class="subscription-error">
 
+                        </ul>
                         <div class="container">
                             <input type="submit" value="Subscribe">
                         </div>
