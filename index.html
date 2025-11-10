@@ -17,7 +17,6 @@
 
 </head>
 <body>
-    <a class="skip-to-main" href="#main">Skip to main content</a>
     <header class="site-header">
         <div class="wrapper">
             <div class="site-header__inner">
@@ -100,8 +99,21 @@
         <section class="background-accent text-center section" data-padding="compact">
             <div class="wrapper" data-width="narrow">
                 <div class="flow font-size-lg text-high-contrast">
-                    <h2 class="section-title">Start your <span class="text-brand">Foraging Adventure!</span></h2>
-                    <p>Whether you're seeking a deeper connection with nature, a new outdoor hobby, or simply love the idea of finding your own food, mushroom foraging offers a uniquely rewarding experience.</p>
+                    <form>
+                        <div>
+                            <h2 class="section-title">Never miss a <span class="text-brand">Recipe!</span></h2>
+                            <p>Subscribe to my newsletter and receive 3 FREE ebooks!</p>
+                        </div>
+                        <div class="container">
+                            <input type="text" placeholder="Name" name="name" required>
+                            <input type="text" placeholder="Email address" name="mail" required>
+                            <label>
+                        </div>
+
+                        <div class="container">
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </form>    
                 </div>
             </div>
         </section>
@@ -116,7 +128,7 @@
                     <div class="flow font-size-lg">
                         <h2 class="section-title">My Pick of the Day</h2>
                         <p>"Halloween is the best excuse to get creative with food! This grazing board is loaded with spooky snacks that hit all the marks: amazing to look at, icredible to eat. Get stuck in!"</p>
-                        <a class="button" href="#"><span class="visually-hidden">My Pick of the day</span>Get the Recipes</a>
+                        <a class="button" href="allrecipe.html"><span class="visually-hidden">My Pick of the day</span>Get the Recipes</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +140,7 @@
                 <div class="flow font-size-lg">
                     <h2 class="section-title">Quick and Easy Recipes</h2>
                     <p>These quick, easy recipes will make you feel like a pro, even when you're short on time.</p>
-                    <a class="button" href="#">Get the Recipes <span class="visually-hidden">about quick and easy recipes</span></a>
+                    <a class="button" href="allrecipe.html">Get the Recipes <span class="visually-hidden">about quick and easy recipes</span></a>
                 </div>
                     <div>
                         <img src="assets/quick-easy.webp" alt="food" />
@@ -139,7 +151,7 @@
     </main>
     <footer class="site-footer home">
         <p class="site-footer__title">Happy Cooking!</p>
-    <a href="mailto:comfortbites@email.com">&copy;Comfort Bites</a>
+        <div class="copy">&copy;&nbsp;Comfort Bites</div>
     </footer>
 </body>
 

@@ -142,7 +142,6 @@
   
     --font-size-sm: var(--fs-300);
     --font-size-regular: var(--fs-400);
-    --font-size-md: var(--fs-500);
     --font-size-lg: var(--fs-600);
 
     --border-radius-1: 0.25rem;
@@ -353,10 +352,11 @@
   }
 
   .site-footer {
-    text-align:center;
-    background: var(--background-dark);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(0, 6%, 15%);
     padding-block: 2rem;
-    display: grid;
     gap: 2rem;
 
     a {
@@ -382,7 +382,7 @@
 
   .hero {
     text-align: center;
-    font-size: var(--font-size-md);
+    font-size: 1.125rem;
     color: var(--text-high-contrast);
     background-image: url(assets/hero.webp);
     background-size:cover;
@@ -423,7 +423,7 @@
 
   .button {
     text-decoration: none;
-    font-size: var(--font-size-md);
+    font-size: 1.125rem;
     cursor: pointer;
     display: inline-flex;
     padding: .5rem 1rem;
@@ -515,7 +515,8 @@
   }
 
   .background-dark .section-title,
-  .background-dark a {
+  .background-dark a,
+  .background-light .button {
     color: hsl(25, 88%, 66%);
   }
 
@@ -534,7 +535,7 @@
     font-size: var(--font-size-regular);
   }
   .font-size-md {
-    font-size: var(--font-size-md);
+    font-size: 1.125rem;
   }
   .font-size-lg {
     font-size: 1.5rem;
