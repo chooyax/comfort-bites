@@ -254,7 +254,12 @@
       }
     }
   }
-
+  @media (width < 760px) {
+      .primary-navigation.show-menu {
+      display: block;
+    }
+  }
+  
 
   @media (width < 760px) {
     [aria-controls="primary-nav"] {
@@ -359,9 +364,64 @@
     color: hsl(0, 0%, 100%);
     background-color: hsl(143, 19%, 49%);
   }
-}
 
-  /* Style inputs with type="text", select elements and textareas */
+    .inner-list {
+  font-size: 2rem;
+  }
+
+  /* Prep inside page icons */
+
+  .prep-details {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-block-start: 32px;
+  }
+
+  .prep-items {
+    display: flex;
+    justify-content: center;
+    padding-block-end: 12px;
+  }
+
+  .prep-details li {
+    list-style-type: none;
+  }
+
+  .prep-timer,
+  .prep-difficulty,
+  .prep-serves {
+    margin-left: 2px;
+  }
+
+  .prep-timer-icon {
+    background-image: url(assets/clock.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 20px;
+    margin: 0px;
+  }
+
+  .prep-difficulty-icon {
+    background-image: url(assets/difficulty.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 20px;
+    margin: 0px;
+  }
+
+  .prep-serves-icon {
+    background-image: url(assets/user.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 20px;
+    margin: 0px;
+  }
+
+    /* Style inputs with type="text", select elements and textareas */
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -405,6 +465,12 @@
     font-size: 2rem;
     color: hsl(25, 88%, 66%);
   }
+
+  .show-menu {
+    opacity: 1;
+    transform: translateX(0%);
+}
+}
 
 @layer utilities {
   .visually-hidden {
@@ -480,61 +546,9 @@
   }
 }
 
-  .inner-list {
-  font-size: 2rem;
-  }
 
-  .prep-details {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    padding-block-start: 32px;
-  }
 
-  .prep-items {
-    display: flex;
-    justify-content: center;
-    padding-block-end: 12px;
-  }
-
-  .prep-details li {
-    list-style-type: none;
-  }
-
-  .prep-timer,
-  .prep-difficulty,
-  .prep-serves {
-    margin-left: 2px;
-  }
-
-  .prep-timer-icon {
-    background-image: url(assets/clock.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    width: 20px;
-    margin: 0px;
-  }
-
-  .prep-difficulty-icon {
-    background-image: url(assets/difficulty.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    width: 20px;
-    margin: 0px;
-  }
-
-  .prep-serves-icon {
-    background-image: url(assets/user.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    width: 20px;
-    margin: 0px;
-  }
-
-/* Carousel */
+/* ====================== Carousel ===================*/
   .carousel {
   position:relative
   }

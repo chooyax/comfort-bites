@@ -1,21 +1,36 @@
-const hamburgerButton = document.querySelector(
-    '[aria-controls="primary-nav"]'
-);
 
-const nav = document.querySelector(".primary-navigation");
+//Hamburger mobile menu
+const hamburgerButton = document.querySelector('[aria-controls="primary-nav"]')
+const mobileMenu = document.querySelector(".primary-navigation");
 
-hamburgerButton.addEventListener("click", () => {
-    //check if the navigation is opened
-    const isNavOpened = hamburgerButton.getAttribute("aria-expanded");
 
-    if (isNavOpened === "false") {
-        hamburgerButton.setAttribute("aria-expanded", "true");
+const mobileNav = () => {
+    return mobileMenu.classList.toggle('show-menu')
+}
 
-    } else {
-        hamburgerButton.setAttribute("aria-expanded", "false");
-    }
+hamburgerButton.addEventListener('click', mobileNav)
 
-});
+// Homepage subscribe form
+const subsForm = document.querySelector('#subscribe')
+const inputName = document.querySelector('#name')
+const inputEmail = document.querySelector('#email')
+const successfulSubcriptionMessage = document.querySelector('#success-subscription')
+let inputRefresh = false;
+
+const subscription = (e) => {
+        if (inputRefresh === false) {
+                inputName.value = "";
+                inputEmail.value = "";
+                successfulSubcriptionMessage.textContent = "Thank you for subscribing!"
+                
+                setTimeout(function(){
+                successfulSubcriptionMessage = "";
+            }, 5000);
+        
+        } e.preventDefault()
+}
+
+subsForm.addEventListener('submit', subscription)
 
 const appForm = document.querySelector('#application-form')
 const errorList = document.querySelector('#errors')
@@ -81,27 +96,5 @@ const validation = (e) => {
     error = false;
 }
 
-//appForm.addEventListener('submit', validation)
+appForm.addEventListener('submit', validation)
 
-
-
-const subsForm = document.querySelector('#subscribe')
-const inputName = document.querySelector('#name')
-const inputEmail = document.querySelector('#email')
-const successfulSubcriptionMessage = document.querySelector('#success-subscription')
-let inputRefresh = false;
-
-const subscription = (e) => {
-    e.preventDefault()
-    if (inputRefresh === false) {
-        inputName.value = "";
-        inputEmail.value = "";
-        successfulSubcriptionMessage.textContent = "Thank you for subscribing"
-    }
-    e.preventDefault()
-    setTimeout(function(){
-        successfulSubcriptionMessage = "";
-    }, 5000);
-}
-
-subsForm.addEventListener('submit', subscription)
