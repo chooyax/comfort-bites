@@ -29,8 +29,9 @@ const subscription = (e) => {
         
         } e.preventDefault()
 }
-
-subsForm.addEventListener('submit', subscription)
+if (subsForm) {
+    subsForm.addEventListener('submit', subscription)
+}
 
 const appForm = document.querySelector('#application-form')
 const errorList = document.querySelector('#errors')
@@ -96,5 +97,8 @@ const validation = (e) => {
     error = false;
 }
 
-appForm.addEventListener('submit', validation)
+if (appForm) {
+    appForm.addEventListener('submit', validation)
+}
+
 
