@@ -260,7 +260,6 @@
       border-radius: 0.5rem;
     }
 
-
   }
   .card__title {
     font-size: 1.5rem;
@@ -501,7 +500,7 @@
 }
 
 
-/* ====================== Carousel ===================*/
+/* ====================== Carousel from Bootstrap ===================*/
   .carousel {
   position:relative
   }
