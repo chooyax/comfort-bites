@@ -77,7 +77,7 @@ const validation = (e) => {
         }, 5000);
 
 
-    }
+    } e.preventDefault()
     error = false;
 }
 
@@ -97,7 +97,11 @@ const subscription = (e) => {
         inputName.value = "";
         inputEmail.value = "";
         successfulSubcriptionMessage.textContent = "Thank you for subscribing"
-    } 
+    }
+    e.preventDefault()
+    setTimeout(function(){
+        successfulSubcriptionMessage = "";
+    }, 5000);
 }
 
 subsForm.addEventListener('submit', subscription)

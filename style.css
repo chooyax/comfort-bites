@@ -402,7 +402,7 @@
   }
 
   #success-subscription {
-    font-size: 25px;
+    font-size: 2rem;
     color: hsl(25, 88%, 66%);
   }
 
@@ -416,12 +416,15 @@
     white-space: nowrap;
     width: 1px;
   }
+
   .text-center {
     text-align: center;
   }
+
   .text-brand {
     color: var(--text-brand);
   }
+
   .text-high-contrast {
     color: hsl(0, 0%, 100%);
   }
@@ -463,12 +466,15 @@
   .font-size-sm {
     font-size: 0.875rem;
   }
+
   .font-size-regular {
     font-size: 1rem;
   }
+
   .font-size-md {
     font-size: 1.125rem;
   }
+  
   .font-size-lg {
     font-size: 1.5rem;
   }
