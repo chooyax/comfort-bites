@@ -18,16 +18,16 @@ const successfulSubcriptionMessage = document.querySelector('#success-subscripti
 let inputRefresh = false;
 
 const subscription = (e) => {
-        if (inputRefresh === false) {
-                inputName.value = "";
-                inputEmail.value = "";
-                successfulSubcriptionMessage.textContent = "Thank you for subscribing!"
-                
-                setTimeout(function(){
-                successfulSubcriptionMessage = "";
-            }, 5000);
+    if (inputRefresh === false) {
+        inputName.value = "";
+        inputEmail.value = "";
+        successfulSubcriptionMessage.textContent = "Thank you for subscribing! Keep an eye on your inbox for our latest updates and exclusive offers."
         
-        } e.preventDefault()
+        setTimeout(function() {
+        successfulSubcriptionMessage.textContent = "";
+    }, 5000);
+    
+    } e.preventDefault()
 }
 if (subsForm) {
     subsForm.addEventListener('submit', subscription)
@@ -83,15 +83,14 @@ const validation = (e) => {
         subject.value = "";
         countrySelect.selectedIndex = 0;
 
-        successMessageForForm.textContent = "Thank you for your queries"
+        successMessageForForm.textContent = "Thank you for reaching out to us! We appreciate your inquiry and will respond as soon as possible."
         const successMessageClass = document.querySelector('#thank-you-message').classList.add('message-style')
 
-        setTimeout(function(){
+        setTimeout(function() {
             successMessageForForm.textContent = "";
             const removeClass = document.querySelector('#thank-you-message')
             removeClass.classList.remove('message-style')
         }, 5000);
-
 
     } e.preventDefault()
     error = false;

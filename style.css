@@ -128,11 +128,6 @@
     gap: var(--equal-columns-gap, 1rem);
     align-items: var(--equal-columns-vertical-alignment, stretch);
 
-    @media (width > 760px ) {
-      grid-auto-flow: column;
-      grid-auto-columns: 1fr;
-    }
-
     &[data-gap="large"] {
       --equal-columns-gap: 2rem;
     }
@@ -161,14 +156,6 @@
   .section {
       --padding: 3.75rem;
       padding-block: var(--padding);
-
-      @media (width > 760px) {
-        --padding: 8rem;
-
-        &[data-padding="compact"] {
-          --padding: 4.5rem;
-        }
-      }
     }
 
 }
@@ -229,47 +216,6 @@
       text-decoration: none;
     }
 
-    @media (width < 760px) {
-      display: none;
-      position: absolute;
-      z-index:10;
-      top: 0;
-      right: 0;
-      font-size: 1.25rem;
-      font-weight: 700;
-      font-family: "Outfit", sans-serif;
-      background-color: hsl(143, 38%, 37%);
-      padding: 2rem;
-      border-radius: 0 0 0 0.75rem;
-
-      ul {
-        gap: 0;
-        flex-direction: column;
-      }
-
-      li + li{
-        margin-block-start: 1.5rem;
-        padding-block-start: 1.5rem;
-        border-top: 2px solid hsl(143, 19%, 49%);
-      }
-    }
-  }
-  @media (width < 760px) {
-      .primary-navigation.show-menu {
-      display: block;
-    }
-  }
-  
-
-  @media (width < 760px) {
-    [aria-controls="primary-nav"] {
-      display: block;
-    }
-
-    [aria-expanded="true"] + .primary-navigation {
-      display: block;
-      padding: 50px;
-    }
   }
 
   .site-footer {
@@ -294,7 +240,8 @@
     background-color: hwb(145 13% 75%);
   }
 
-  .site-footer__title{
+  .site-footer__title,
+  .copy {
   font-size: 1.25rem;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
@@ -422,7 +369,10 @@
   }
 
     /* Style inputs with type="text", select elements and textareas */
-  input[type=text], select, textarea {
+  input[type=text],
+  input[type=email], 
+  select, 
+  textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -446,8 +396,15 @@
   /* Add a background color and some padding around the form */
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: hsl(0, 6%, 15%);
     padding: 20px;
+  }
+
+  .contact-container {
+    border-radius: 5px;
+    background-color: hsl(145, 29%, 19%);
+    padding: 20px;
+    color: #fff;
   }
 
   .message-style {
@@ -466,10 +423,14 @@
     color: hsl(25, 88%, 66%);
   }
 
+  #subscribe div {
+    margin-bottom: 2.5rem;
+  }
+
   .show-menu {
     opacity: 1;
     transform: translateX(0%);
-}
+  }
 }
 
 @layer utilities {
@@ -487,20 +448,12 @@
     text-align: center;
   }
 
-  .text-brand {
-    color: var(--text-brand);
-  }
-
   .text-high-contrast {
     color: hsl(0, 0%, 100%);
   }
 
   .section-title {
     font-size: 2rem;
-
-    @media (width > 760px) {
-        font-size: 3rem;
-    }
   }
 
   .text-brand {
@@ -545,7 +498,6 @@
     font-size: 1.5rem;
   }
 }
-
 
 
 /* ====================== Carousel ===================*/
@@ -727,8 +679,71 @@
   .carousel-dark{
     --bs-carousel-indicator-active-bg:#000;
     --bs-carousel-caption-color:#000;
-    --bs-carousel-control-icon-filter:invert(1) grayscale(100)}:root,[data-bs-theme=light]{
-      --bs-carousel-indicator-active-bg:#fff;--bs-carousel-caption-color:#fff;--bs-carousel-control-icon-filter: }[data-bs-theme=dark]{
-        --bs-carousel-indicator-active-bg:#000;
-        --bs-carousel-caption-color:#000;--bs-carousel-control-icon-filter:invert(1) grayscale(100);
+    --bs-carousel-control-icon-filter:invert(1) grayscale(100)}:root,
+    [data-bs-theme=light] {
+    --bs-carousel-indicator-active-bg:#fff;
+    --bs-carousel-caption-color:#fff;
   }
+  
+    [data-bs-theme=dark]{
+    --bs-carousel-indicator-active-bg:#000;
+    --bs-carousel-caption-color:#000;
+    --bs-carousel-control-icon-filter:invert(1) grayscale(100);
+  }
+
+@media (width < 760px) {
+  .primary-navigation {
+    display: none;
+    position: absolute;
+    z-index:10;
+    top: 0;
+    right: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: "Outfit", sans-serif;
+    background-color: hsl(143, 38%, 37%);
+    padding: 2rem;
+    border-radius: 0 0 0 0.75rem;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .primary-navigation ul {
+    gap: 0;
+    flex-direction: column;	
+  }
+
+  .primary-navigation li + li {
+    margin-block-start: 1.5rem;
+    padding-block-start: 1.5rem;
+    border-top: 2px solid hsl(143, 19%, 49%);
+  }
+
+  .primary-navigation.show-menu,
+  [aria-controls="primary-nav"] {
+    display: block;
+  } 
+}
+
+@media (width > 760px ) {
+	.equal-columns	{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    }
+
+	.section {
+    --padding: 8rem;
+
+    &[data-padding="compact"] {
+      --padding: 4.5rem;
+    }
+  }
+	.section-title {
+	font-size: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+	}
+}
+
